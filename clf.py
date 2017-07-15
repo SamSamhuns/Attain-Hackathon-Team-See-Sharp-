@@ -1,4 +1,5 @@
 import csv
+import phaser
 import numpy as np
 from sklearn.cross_validation import train_test_split
 from sklearn.metrics import accuracy_score, confusion_matrix
@@ -6,23 +7,31 @@ from sklearn import svm
 from sklearn.externals import joblib
 
 def main():
-    country_id, year, week = input("Enter countryId year and week:").split()
-
-    region = 0
-    if country_id == '1':
-    	region = 1
-    elif country_id == '2' or country_id == '4':
-    	region = 2
-    elif country_id == '3':
-        region = 3
-    elif country_id == '5' or country == '6':
-        region = 4
-
-    testdata = np.matrix([country_id, region, year, week])
+    flag = input("Enter 1 for searching countries and other value for searching regions:")
     C = joblib.load('clf.pkl')
-    result = C.predict(testdata)
-    result = result[np.newaxis].T
-    print(result[0,0])
+
+
+    if flag == 0:
+        country = input("Enter country name:")
+        year, week = input("Enter year and week:").split()
+        country_id = phaser.get_ID_by_name(country)
+        region = phaser.get_region(country_id)
+        testdata = np.matrix([country_id, region, year, week])
+        result = C.predict(testdata)
+        result = result[np.newaxis].T
+        print(result[0,0])
+    else:
+        region = input("Enter region name:")
+        year, week = input("Enter yeaer and week:").split()
+        region_id = phaser.get_ID_by_region(region)
+        r = []
+        for country in phaser.get_countries(region_id):
+            r.append([country, region_id, year, weeek])
+        testdata = np.matrix(r)
+        result = C.predict(testdata)
+        result = result[np.newaxis].T
+        print(result)
+        
 
 if __name__ == '__main__':
     main()
