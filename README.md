@@ -31,5 +31,5 @@ For a list of all nations, check `dict.json`.
 For the list of all regions, check `region.json`.
 
 ### Acknowledgments
-* Attain Consulting VA, USA
-* Teammates for this project during the Hackathon Jeanie, Tianchu, and Fang
+*   Attain Consulting VA, USA
+*   Teammates for this project during the Hackathon Jeanie, Tianchu, and Fang
