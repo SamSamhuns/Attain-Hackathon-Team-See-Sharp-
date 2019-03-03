@@ -1,0 +1,10 @@
+# Mac OSX System info files
+*.DS_Store
+
+# Compiled python files
+__pycache__
+*.pyc
+
+# Virtual env files
+venv
+env
