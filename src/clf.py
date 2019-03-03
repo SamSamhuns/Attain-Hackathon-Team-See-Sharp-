@@ -1,0 +1,44 @@
+import csv
+import phaser
+import numpy as np
+from sklearn.cross_validation import train_test_split
+from sklearn.metrics import accuracy_score, confusion_matrix
+from sklearn import svm
+from sklearn.externals import joblib
+
+def main():
+    flag = input("Enter 1 for searching countries and other value for searching regions:")
+    C = joblib.load('clf.pkl')
+
+
+    if flag == "1":
+        country = input("Enter country name:")
+        year, week = input("Enter year and week:").split()
+        country_id = phaser.get_ID_by_name(country)
+        region = phaser.get_region(country_id)
+        testdata = np.matrix([country_id, region, year, week])
+        result = C.predict(testdata)
+        result = result[np.newaxis].T
+        print(result[0,0])
+    else:
+        region = input("Enter region name:")
+        year, week = input("Enter year and week:").split()
+        region_id = phaser.get_ID_by_region(region)
+        r = []
+        c = phaser.get_countries(region_id)
+        for country in c:
+            r.append([country, region_id, year, week])
+        testdata = np.matrix(r)
+        result = C.predict(testdata)
+        result = result[np.newaxis].T
+        rr = []
+        i = 0
+        for row in result:
+            rr.append([phaser.get_name_by_ID(c[i]) ,row[0]])
+            i += 1
+        
+        print(rr)
+        
+
+if __name__ == '__main__':
+    main()
