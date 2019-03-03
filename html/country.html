@@ -96,7 +96,7 @@ body{
 	color: #fff;
 	margin-top: -3px;
 }
-.form-style-10 input[type="button"], 
+.form-style-10 input[type="button"],
 .form-style-10 input[type="submit"]{
 	background: #2A88AD;
 	padding: 8px 20px 8px 20px;
@@ -112,7 +112,7 @@ body{
 	border: 1px solid #257C9E;
 	font-size: 15px;
 }
-.form-style-10 input[type="button"]:hover, 
+.form-style-10 input[type="button"]:hover,
 .form-style-10 input[type="submit"]:hover{
 	background: #2A6881;
 	-moz-box-shadow: inset 0px 2px 2px 0px rgba(255, 255, 255, 0.28);
@@ -139,33 +139,25 @@ body{
 </head>
 
 <body>
-<center><img src="plr.jpg" align='center' width='500px' height='200px' />
+<center><img src="predemic_logo.jpg" align='center' width='500px' height='200px' />
     <h2 style="font-family:Lucida Fax; color:#ed2024;">An application that predicts epidemics in the world </h2> </center>
 
 
 <div class="form-style-10">
-<h1 style="font-family:Tahoma; background-color:#ed2224; "><center>Choose Region and date</center></h1>
+<h1 style="font-family:Tahoma; background-color:#ed2224; "><center>Choose Country and date</center></h1>
 
-<form name="region" action="clf.py" method="POST">
-    <!--<div class="section" style="color:#ed2224;"><span style="background-color:#ed2224;">1</span>Choose Region</div>-->
+<form name="country" action="clf.py" method="POST">
+    <!--<div class="section" style="color:#ed2224;"><span style="background-color:#ed2224;">1</span>Choose Country</div>-->
     <div class="inner-wrap">
-        <label style="margin-bottom:0px;" name="region">Region</label>
-  <select name="Region">
-    <option value="3"> African Region</option>
-    <option value="4">Eastern Mediterranean Region</option>
-    <option value="2">European Region </option>
-    <option value="1">Region of the Americas</option>
-    <option value="6">South-East Asia Region</option>
-    <option value="5">Western Pacific Region</option>
-  </select>
-  <label>Prediction Date<input type='date' name="field2"></label>
-     
+        <label>Name of Country<input type="text" name="country" /></label>
+        <label>Prediction Date<input type='date' name="field2"></label>
+
     </div>
 
-    <div class="button-section">  
+    <div class="button-section">
      <input type="submit" name="Sign Up" style="background-color:#ed2224;" />
      <span class="privacy-policy">
-     <input type="checkbox" name="field7">You agree to our Terms and Policy. 
+     <input type="checkbox" name="field7">You agree to our Terms and Policy.
      </span>
     </div>
 

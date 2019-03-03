@@ -16,9 +16,9 @@ body{
 	border-radius: 10px;
 	-webkit-border-radius:10px;
 	-moz-border-radius: 10px;
-	box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.13);
-	-moz-box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.13);
-	-webkit-box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.13);
+	box-shadow: 0px 0px 10px;
+	-moz-box-shadow: 0px 0px 10px;
+	-webkit-box-shadow: 0px 0px 10px;
 }
 .form-style-10 .inner-wrap{
 	padding: 30px;
@@ -36,8 +36,8 @@ body{
 	color: #fff;
 	text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.12);
 	font: normal 30px 'Bitter', serif;
-	-moz-box-shadow: inset 0px 2px 2px 0px rgba(255, 255, 255, 0.17);
-	-webkit-box-shadow: inset 0px 2px 2px 0px rgba(255, 255, 255, 0.17);
+	-moz-box-shadow: inset 0px 2px 2px 0px ;
+	-webkit-box-shadow: inset 0px 2px 2px 0px ;
 	box-shadow: inset 0px 2px 2px 0px rgba(255, 255, 255, 0.17);
 	border: 1px solid #257C9E;
 }
@@ -96,7 +96,7 @@ body{
 	color: #fff;
 	margin-top: -3px;
 }
-.form-style-10 input[type="button"], 
+.form-style-10 input[type="button"],
 .form-style-10 input[type="submit"]{
 	background: #2A88AD;
 	padding: 8px 20px 8px 20px;
@@ -112,7 +112,7 @@ body{
 	border: 1px solid #257C9E;
 	font-size: 15px;
 }
-.form-style-10 input[type="button"]:hover, 
+.form-style-10 input[type="button"]:hover,
 .form-style-10 input[type="submit"]:hover{
 	background: #2A6881;
 	-moz-box-shadow: inset 0px 2px 2px 0px rgba(255, 255, 255, 0.28);
@@ -139,28 +139,28 @@ body{
 </head>
 
 <body>
-<center><img src="plr.jpg" align='center' width='500px' height='200px' />
-    <h2 style="font-family:Lucida Fax; color:#ed2024;">An application that predicts epidemics in the world </h2> </center>
+<center><img src="predemic_logo.jpg" align='center' width='500px' height='200px' />
+    <h2 style="font-family:Lucida Fax; color:#ed2024;">An application that predicts epidemics in the World </h2> </center>
 
 
 <div class="form-style-10">
-<h1 style="font-family:Tahoma; background-color:#ed2224; "><center>Choose Country and date</center></h1>
+<h1 style="font-family:Tahoma; background-color:#ed2224; "><center><P>Choose Epidemic</P></center></h1>
+  <select name="Epidemic" class="form-style-10">
+    <option value="3"> <p>Influenza</p></option>
+    <option value="4"><p>Malaria</p></option>
+    <option value="2"><p>Ebola</p></option>
+    <option value="1"><p>Spanish Flu</p></option>
+    <option value="6"><p>Swine Flu</p></option>
+  </select>
 
-<form name="country" action="clf.py" method="POST">
-    <!--<div class="section" style="color:#ed2224;"><span style="background-color:#ed2224;">1</span>Choose Country</div>-->
-    <div class="inner-wrap">
-        <label>Name of Country<input type="text" name="country" /></label>
-        <label>Prediction Date<input type='date' name="field2"></label>
-     
-    </div>
-
-    <div class="button-section">  
-     <input type="submit" name="Sign Up" style="background-color:#ed2224;" />
-     <span class="privacy-policy">
-     <input type="checkbox" name="field7">You agree to our Terms and Policy. 
-     </span>
-    </div>
-
+<form >
+    <!--<div class="section" style="color:#ed2224;"><span style="background-color:#ed2224;">0</span>Influenza Prediction</div>-->
+    	<h2><center style="color:#ed2224; font: 23	px Arial, Helvetica, sans-serif;" >Select By</center></h2>
+ <center>
+ 	<a class="btn btn-primary" href="country.html" role="button" style="color:#ffffff; font: 23px Tahoma; background-color:#ed2224;" >Country</a>
+ 	<br><br>
+	<a class="btn btn-primary" href="region.html" role="button" style="color:#ffffff; font: 23px Tahoma; background-color:#ed2224;">Region</a>
+ </center>
 
 </form>
 </div>
