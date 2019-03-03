@@ -1,8 +1,35 @@
-# Attain-Hackathon-Team-See-Sharp-Predemic
+![Predemic](https://raw.githubusercontent.com/SamSamhuns/predemic/master/predemic_logo.jpg)
 
 Python scikit based application to make predictions on the likelihood of outbreaks of epidemics based on past epidemic and pandemic data from the WHO.
-Supervised Machine Learning using Sci-kit learn from the Python Library. 
 
-All training data and python files are inside ATTAIN_HACKATHONE_FinalVersion.zip.
-The machine learning algorithm has to be trained before being used to predict probability of future outbreaks.
-Results are outputted in the python terminal from 0 - being least likely to 4 - being most likely.
+This project uses a supervised machine learning model that uses a SVM with Radial Basis Function from the scikit library.
+
+All training data and python files are inside src folder.
+
+## Setup and Installation
+```shell
+$ python3 -m venv venv
+$ source venv/bin/activate
+$ pip install -r requirements.txt
+```
+
+## Training
+The machine learning algorithm has to be trained before being used to predict probability of future outbreaks. All source files in `src`.
+```shell
+$ python3 svm.py
+```
+
+## Testing
+```shell
+$ python3 clf.py
+```
+
+Results are outputted in the terminal from 0 - being least likely to 4 - being most likely.
+
+For a list of all nations, check `dict.json`.
+
+For the list of all regions, check `region.json`.
+
+### Acknowledgments
+* Attain Consulting VA, USA
+* Teammates Jeanie, Tianchu, and Fang
