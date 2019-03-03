@@ -1,4 +1,4 @@
-![Predemic](https://raw.githubusercontent.com/SamSamhuns/predemic/master/predemic_logo.jpg)
+<img src="https://github.com/SamSamhuns/predemic/blob/master/predemic_logo.jpg" width="400" height="200" />
 
 Python scikit based application to make predictions on the likelihood of outbreaks of epidemics based on past epidemic and pandemic data from the WHO.
 
@@ -32,4 +32,4 @@ For the list of all regions, check `region.json`.
 
 ### Acknowledgments
 * Attain Consulting VA, USA
-* Teammates Jeanie, Tianchu, and Fang
+* Teammates for this project during the Hackathon Jeanie, Tianchu, and Fang
