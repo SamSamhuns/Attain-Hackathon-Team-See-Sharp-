@@ -28,11 +28,11 @@ $ python3 svm.py
 $ python3 clf.py
 ```
 
-Results are outputted in the terminal from 0 - being least likely to 4 - being most likely.
+Results are outputted in the terminal from 0.0 - being least likely to 4.0 - being most likely.
 
-For a list of all nations, check `dict.json`.
+For a list of all nations, check `dict.json`. The fullname of the country has to be entered i.e. "China".
 
-For the list of all regions, check `region.json`.
+For the list of all regions, check `region.json`. The fullname of the region has to be entered i.e. "South-East Asia Region of WHO".
 
 ### Acknowledgments
 *   Attain Consulting VA, USA
