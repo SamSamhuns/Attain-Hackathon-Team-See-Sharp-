@@ -1,8 +1,7 @@
 import numpy as np
 from sklearn.model_selection import train_test_split
 from sklearn import svm
-from sklearn.externals import joblib
-#from sklearn import preprocessing
+import joblib
 
 
 def train(data):
@@ -14,13 +13,11 @@ def train(data):
         print('Error reading data')
     X_train, X_val, y_train, y_val = train_test_split(
         x, y, test_size=0.33, random_state=1)
-    #X = preprocessing.scale(X_train)
+
     clf = svm.SVC(kernel='rbf', random_state=2, C=50, probability=False)
     clf = clf.fit(X_train, y_train)
-    #XV = preprocessing.scale(X_val)
+
     y_pred = clf.predict(X_val)
-    print(accuracy_score(y_val, y_pred))
-    #print(confusion_matrix(y_val, y_pred))
     return clf
 
 

@@ -1,16 +1,16 @@
 import phaser
 import numpy as np
-from sklearn.externals import joblib
+import joblib
 
 
 def main():
     flag = input(
-        "Enter 1 for searching countries and other value for searching regions:")
+        "Enter 1 to search by country and any other value to search by region:")
     C = joblib.load('clf.pkl')
 
     if flag == "1":
-        country = input("Enter country name:")
-        year, week = input("Enter year and week:").split()
+        country = input("Enter country name (i.e. China): ")
+        year, week = input("Enter year and week (YYYY WW i.e. 2050 12): ").split()
         country_id = phaser.get_ID_by_name(country)
         region = phaser.get_region(country_id)
         testdata = np.matrix([country_id, region, year, week])
@@ -18,8 +18,8 @@ def main():
         result = result[np.newaxis].T
         print(result[0, 0])
     else:
-        region = input("Enter region name:")
-        year, week = input("Enter year and week:").split()
+        region = input("Enter region name: ")
+        year, week = input("Enter year and week (YYYY WW i.e. 2050 12): ").split()
         region_id = phaser.get_ID_by_region(region)
         r = []
         c = phaser.get_countries(region_id)
