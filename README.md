@@ -1,8 +1,6 @@
 <img src="https://github.com/SamSamhuns/predemic/blob/master/predemic_logo.jpg" width="400" height="200" />
 
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/2d8205ea39894ef7b3f943c27ff82299)](https://www.codacy.com/app/samhunsadamant/predemic?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=SamSamhuns/predemic&amp;utm_campaign=Badge_Grade)
-[![Updates](https://pyup.io/repos/github/SamSamhuns/predemic/shield.svg)](https://pyup.io/repos/github/SamSamhuns/predemic/)
-[![Python 3](https://pyup.io/repos/github/SamSamhuns/predemic/python-3-shield.svg)](https://pyup.io/repos/github/SamSamhuns/predemic/)
 
 Python scikit based application to make predictions on the likelihood of outbreaks of epidemics based on past epidemic and pandemic data from the WHO.
 
